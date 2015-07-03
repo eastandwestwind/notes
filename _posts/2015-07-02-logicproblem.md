@@ -3,7 +3,7 @@ layout: post_page
 title: Logic Problem Answer
 ---
 
-Albert and Bernard just became friends with Cheryl. and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates.
+Albert and Bernard just became friends with Cheryl, and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates.
 
           May 15     May 16     May 19
          June 17    June 18
@@ -21,7 +21,7 @@ Albert: Then I also know when Cheryl’s birthday is.
 
 So when is Cheryl’s birthday?
 
-
+___________________________________________________________
 Here is my answer:
 
 If Albert knows that Bernard doesn’t know, you can deduct the following things:
