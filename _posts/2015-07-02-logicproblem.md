@@ -3,12 +3,13 @@ layout: post_page
 title: Logic Problem Answer
 ---
 
-Albert and Bernard just became friends with Cheryl. and they want to know when her birthday is. Cheryl gives them a lost of 10 possible dates.
+Albert and Bernard just became friends with Cheryl. and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates.
 
           May 15     May 16     May 19
          June 17    June 18
          July 14    July 16
-       August 14  August 15  August 17
+       	August 14  August 15  August 17
+
 
 Cheryl then tells Albert and Bernard separately the month and the day of her birthday respectively.
 
