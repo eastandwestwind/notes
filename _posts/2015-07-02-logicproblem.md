@@ -1,7 +1,11 @@
 ---
 layout: post_page
-title: Logic Problem Answer
+title: Logic Problem + Answer
 ---
+
+This is a pretty cool logic problem I came across, as viral content often makes it across my newsfeed on the good ol' FB. See if you can figure it out on your own before looking at the answer. It took me around 10 min to figure it out, so don't give up so easily.
+
+Here is the problem:
 
 Albert and Bernard just became friends with Cheryl, and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates.
 
