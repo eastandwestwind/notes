@@ -9,6 +9,7 @@ Albert and Bernard just became friends with Cheryl. and they want to know when h
          June 17    June 18
          July 14    July 16
        August 14  August 15  August 17
+
 Cheryl then tells Albert and Bernard separately the month and the day of her birthday respectively.
 
 Albert: I don’t know when Cheryl’s birthday is, but I know that Bernard does not know too.
