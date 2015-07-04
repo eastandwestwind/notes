@@ -3,7 +3,7 @@ layout: post_page
 title: Mrs. Handford's Chocolate Chip Cookies
 ---
 
-Important: a couple hours before starting, set the butter out to soften.
+IMPORTANT: This recipe takes 2 days, mostly just waiting, but oh it is worth it. Be sure to set the butter out to soften a couple hours before starting.
 
 2 cups minus 2 tablespoons (8 1/2 ounces) cake flour
 1 2/3 cups (8 1/2 ounces) bread flour

@@ -31,7 +31,7 @@ Here is my answer:
 If Albert knows that Bernard doesn’t know, you can deduct the following things:
 If Bernard doesn’t know, Bernard was given a day of the month that is not unique in the list of 10 possible dates. Otherwise, Bernard would automatically know the birthday. This eliminates May 19 and June 18.
 
-Because Albert knows that Bernard doesn’t know, The month that Albert knows only contains date options that are listed more than once in the given list of 10 possible dates. This eliminates the months of May and June, and leaves all options under July and August still open.
+Because Albert knows that Bernard doesn’t know, the month that Albert knows only contains date options that are listed more than once in the given list of 10 possible dates. This eliminates the months of May and June, and leaves all options under July and August still open.
 
 If Bernard then knows the birthday, the following is true:
 Within the remaining options under July and August, the day must be unique. This eliminates July 14 and August 14, and leaves 3 remaining options: July 16, August 15, and August 17.
