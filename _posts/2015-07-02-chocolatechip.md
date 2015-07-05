@@ -1,7 +1,9 @@
 ---
 layout: post_page
-title: Mrs. Handford's Chocolate Chip Cookies
+title: The Chocolate Chip Cookies of your dreams
 ---
+
+A recipe passed down to me from my harpsicord teacher in college, Mrs. Handford.
 
 IMPORTANT: This recipe takes 2 days, mostly just waiting, but oh it is worth it. Be sure to set the butter out to soften a couple hours before starting.
 

@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: Logic Problem + Answer
+title: Can you solve this?
 ---
 
 This is a pretty cool logic problem I came across, as viral content often makes it across my newsfeed on the good ol' FB. See if you can figure it out on your own before looking at the answer. It took me around 10 min to figure it out, so don't give up so easily.
