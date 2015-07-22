@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: The Cat Cooks: Tomato Magic Sauce
+title: The cat cooks: Tomato Magic Sauce
 ---
 
 How to make canned tomato sauce taste 10x better
