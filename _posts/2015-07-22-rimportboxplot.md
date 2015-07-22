@@ -3,6 +3,7 @@ layout: post_page
 title: Using R to import .csv and graph data
 ---
 
+```
 > getwd()
 [1] "/Users/Catherine"
 > setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides
@@ -50,6 +51,6 @@ Using Gender as id variables
 5 Female Multiple.Choice        0.5
 6 Female Multiple.Choice        1.0
 > ggplot(melt.df,aes(x=Test.type,y=Difficulty,fill=Gender)) + geom_boxplot() + scale_fill_manual(values=c("yellow","orange"))
-
+```
 
 ![Boxplot](/Users/Catherine/Dropbox/Blog/images/boxplot_test_gender.pdf)
