@@ -2,7 +2,7 @@
 layout: post_page
 title: Using R to import .csv and graph data
 ---
-```R
+```{r}
 > getwd()  
 [1] "/Users/Catherine"  
 > setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
