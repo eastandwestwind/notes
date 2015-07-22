@@ -52,4 +52,4 @@ title: Using R to import .csv and graph data
 	> ggplot(melt.df,aes(x=Test.type,y=Difficulty,fill=Gender)) + geom_boxplot() + scale_fill_manual(values=c("yellow","orange"))  
 
 
-![Boxplot](/tree/master/images/boxplot_test_gender.pdf)
+![Boxplot](/Users/Catherine/Dropbox/Blog/images/boxplot_test_gender.png)
