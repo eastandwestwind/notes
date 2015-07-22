@@ -3,7 +3,7 @@ layout: post_page
 title: Using R to import .csv and graph data
 ---
 
-> getwd() 
+>> getwd() 
 [1] "/Users/Catherine"  
 > setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
 > df<-read.csv("testtaking.csv",header=TRUE,row.names=NULL) #named by dataframe df  
