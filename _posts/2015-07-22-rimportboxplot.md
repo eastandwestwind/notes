@@ -3,18 +3,18 @@ layout: post_page
 title: Using R to import .csv and graph data
 ---
 
->> getwd() 
-[1] "/Users/Catherine"  
-> setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
-> df<-read.csv("testtaking.csv",header=TRUE,row.names=NULL) #named by dataframe df  
-> head(df) #check data import  
-  Gender             Age Multiple.Choice Essay  X X.1
-1 Female 18-24 years old             1.0    -1 NA  NA
-2 Female 25-34 years old             2.0     1 NA  NA
-3 Female 25-34 years old            -1.0     1 NA  NA
-4 Female 18-24 years old             1.0     1 NA  NA
-5 Female 25-34 years old             0.5     1 NA  NA
-6 Female 18-24 years old             1.0    -1 NA  NA
+	> getwd() 
+	[1] "/Users/Catherine"  
+	> setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
+	> df<-read.csv("testtaking.csv",header=TRUE,row.names=NULL) #named by dataframe df  
+	> head(df) #check data import  
+  	Gender             Age Multiple.Choice Essay  X X.1
+	1 Female 18-24 years old             1.0    -1 NA  NA
+	2 Female 25-34 years old             2.0     1 NA  NA
+	3 Female 25-34 years old            -1.0     1 NA  NA
+	4 Female 18-24 years old             1.0     1 NA  NA
+	5 Female 25-34 years old             0.5     1 NA  NA
+	6 Female 18-24 years old             1.0    -1 NA  NA
 > df$X<-NULL #clean up unnecessary columns  		
 > df$X.1<-NULL #clean up unnecessary columns  
 > df$Age<-NULL	#remove another unnecessary column  
