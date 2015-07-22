@@ -68,13 +68,3 @@ We can just eyeball (yes I know I have small data set, whatever, don't hate) tha
 
 The thing we notice is that people tend to view multiple choice questions as easier than essay questions, by about 1.25 difficulty levels. This gap is a bit smaller than I had initially expected. Make note that most people I surveyed were either in college or recent college graduates.
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64729638-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
