@@ -19,7 +19,7 @@ title: Using R to import .csv and graph data
 	> df$X.1<-NULL #clean up unnecessary columns  
 	> df$Age<-NULL	#remove another unnecessary column  
 	> df #list entire data fram to check for strange things  
-      Gender Multiple.Choice Essay  
+       Gender Multiple.Choice Essay  
 	1  Female             1.0    -1  
 	2  Female             2.0     1  
 	3  Female            -1.0     1  
