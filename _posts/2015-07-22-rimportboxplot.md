@@ -8,7 +8,7 @@ title: Using R to import .csv and graph data
 	> setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
 	> df<-read.csv("testtaking.csv",header=TRUE,row.names=NULL) #named by dataframe df  
 	> head(df) #check data import  
-    Gender             Age Multiple.Choice Essay  X X.1
+      Gender             Age Multiple.Choice Essay  X X.1
 	1 Female 18-24 years old             1.0    -1 NA  NA
 	2 Female 25-34 years old             2.0     1 NA  NA
 	3 Female 25-34 years old            -1.0     1 NA  NA
@@ -19,7 +19,7 @@ title: Using R to import .csv and graph data
 	> df$X.1<-NULL #clean up unnecessary columns  
 	> df$Age<-NULL	#remove another unnecessary column  
 	> df #list entire data fram to check for strange things  
-    Gender Multiple.Choice Essay  
+      Gender Multiple.Choice Essay  
 	1  Female             1.0    -1  
 	2  Female             2.0     1  
 	3  Female            -1.0     1  
@@ -33,7 +33,7 @@ title: Using R to import .csv and graph data
 	Using Gender as id variables  
 	> library(ggplot2)  
 	> head(melt.df) #check column names for use in boxplot  
-    Gender        variable value
+      Gender        variable value
 	1 Female Multiple.Choice   1.0
 	2 Female Multiple.Choice   2.0
 	3 Female Multiple.Choice  -1.0
@@ -42,7 +42,7 @@ title: Using R to import .csv and graph data
 	6 Female Multiple.Choice   1.0
 	> colnames(melt.df)<-c("Gender","Test.type","Difficulty") #change column names  
 	> head(melt.df)  
-    Gender       Test.type Difficulty
+      Gender       Test.type Difficulty
 	1 Female Multiple.Choice        1.0
 	2 Female Multiple.Choice        2.0
 	3 Female Multiple.Choice       -1.0
