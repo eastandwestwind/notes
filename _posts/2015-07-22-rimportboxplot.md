@@ -3,6 +3,12 @@ layout: post_page
 title: Using R to import .csv and graph data
 ---
 
+Hello, this post is not so much intended as a how-to, rather more as a code journal for myself and for others as an example of how I went from A to B to C, etc.
+
+In this example, I gathered data from 50 something participants regarding the difficulty of test question types. I had to convert the difficulty level to a numerical value, so replacing Difficult with -2 and Easy with 2, Neutral with 0, and so forth. 
+
+I saved my data from excel into a .csv, then began my R session:
+
 	> getwd() 
 	[1] "/Users/Catherine"  
 	> setwd("/Users/Catherine/Dropbox/Docs") #this is where my .csv resides  
@@ -52,4 +58,4 @@ title: Using R to import .csv and graph data
 	> ggplot(melt.df,aes(x=Test.type,y=Difficulty,fill=Gender)) + geom_boxplot() + scale_fill_manual(values=c("yellow","orange"))  
 
 
-![Boxplot](https://github.com/eastandwestwind/eastandwestwind.github.io/tree/master/images/boxplot_test_gender.png)
+![Boxplot](/images/boxplot_test_gender.png)
