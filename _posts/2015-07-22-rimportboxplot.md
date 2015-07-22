@@ -5,7 +5,11 @@ title: Using R to import .csv and graph data
 
 Hello, this post is not so much intended as a how-to, rather more as a code journal for myself and for others as an example of how I went from A to B to C, etc.
 
-In this example, I gathered data from 50 something participants regarding the difficulty of test question types. I had to convert the difficulty level to a numerical value, so replacing Difficult with -2 and Easy with 2, Neutral with 0, and so forth. 
+In this example, I gathered data from 50 something participants regarding the difficulty of test question types. 
+
+Almost exactly the same number of females as males took the survey.
+
+I had to convert the difficulty level to a numerical value, so replacing Difficult with -2 and Easy with 2, Neutral with 0, and so forth. 
 
 I saved my data from excel into a .csv, then began my R session:
 
@@ -24,7 +28,7 @@ I saved my data from excel into a .csv, then began my R session:
 	> df$X<-NULL #clean up unnecessary columns  		
 	> df$X.1<-NULL #clean up unnecessary columns  
 	> df$Age<-NULL	#remove another unnecessary column  
-	> df #list entire data fram to check for strange things  
+	> df #list entire data frame to check for strange things  
        Gender Multiple.Choice Essay  
 	1  Female             1.0    -1  
 	2  Female             2.0     1  
