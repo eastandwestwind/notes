@@ -29,10 +29,10 @@ title: Using R to import .csv and graph data
 
 > df #list entire data fram to check for strange things
 
-   Gender Multiple.Choice Essay
-*1  Female             1.0    -1
-*2  Female             2.0     1
-*3  Female            -1.0     1
+   Gender Multiple.Choice Essay  
+1  Female             1.0    -1  
+2  Female             2.0     1  
+3  Female            -1.0     1  
 . . .									#abbreviated for brevity here
 50   Male             1.0     1
 51   Male             2.0     2
