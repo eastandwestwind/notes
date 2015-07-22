@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: The Cat Cooks: Grilled Cheese Magic Sandwich
+title: The Cat Cooks Grilled Cheese Magic Sandwich
 ---
 
 How to make a fantastic grilled cheese sandwich.
