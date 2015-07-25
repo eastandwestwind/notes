@@ -1,0 +1,63 @@
+---
+layout: post_page
+title: Export data from Google Analytics using R
+---
+
+Exporting your data from Google Analytics is great when you want to customize your visualizations.
+
+Check out the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to explore possible queries you can write.
+
+	> getwd()  
+	[1] "/Users/Catherine"  
+	> setwd("/Users/Catherine/Dropbox/Blog/images/")  
+	> library("colorout")	#make R pretty  
+	> library(rga)  
+	Loading required package: RCurl  
+	Loading required package: bitops  
+	Loading required package: jsonlite  
+
+	Attaching package: ‘jsonlite’  
+
+	The following object is masked from ‘package:utils’:  
+
+    	View  
+
+	Loading required package: httr  
+	> rga.open(instance="ga")  
+	> startdate <- "2015-05-01"  
+	> enddate <- "2015-05-29"  
+	> id <- "ga:xxxxxxxx"  
+	>   
+	> #Sessions sorted by city in the US, excluding "not set"  
+	> sessions_city <- ga$getData(  
+	+ id = id,  
+	+ batch=TRUE,  
+	+ walk=TRUE,  
+	+ start.date = startdate, 
+	+ end.date = enddate,  
+	+ metrics = "ga:sessions",  
+	+ dimensions = "ga:city",  
+	+ sort = "-ga:sessions",  #sort decending by sessions  
+	+ filter = "ga:city!@not set;ga:country==United States", #excludes cities that are not set and only includes cities in US  
+	+ start = 1, 
+	+ max = 10  
+	+ )  
+	Pulling 10 observations in batches of 10  
+	Run (1/1): observations [1;10]. Batch size: 10  
+	Received: 10 observations  
+	>  
+	> sessions_city  
+                        	city sessions  
+	1                   Appleton        6  
+	2                Warrenville        6  
+	3                   New York        3  
+	4                  San Diego        2  
+	5                 Cape Coral        1  
+	6                    Chicago        1  
+	7                 Framingham        1  
+	8                Los Angeles        1  
+	9                    Madison        1  
+	10 Meridian charter Township        1  
+	> write.csv(sessions_city, file = "sessions_city.csv",row.names=FALSE)  
+
+There, now you should be able to open the .csv in excel and do what you need. Be aware that in your queries with multiple entries per parameter, filters are separated by semicolons, while metrics and dimentions are separated by commas.
