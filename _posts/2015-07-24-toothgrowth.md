@@ -20,13 +20,13 @@ The two delivery methods are orange juice (OJ) and ascorbic acid (VC).
  	3rd Qu.:25.27           3rd Qu.:2.000  
  	Max.   :33.90           Max.   :2.000 
 	> sapply(ToothGrowth,class) #see the classes of columns  
-      len      supp      dose 
+      	  len      supp      dose 
 	"numeric"  "factor" "numeric" 
 	#Now I can see that we have varying dosage amounts, 2 different ways of supplying the dose, and of course resulting tooth growth.
 	> library(reshape2)  
 	> library(ggplot2)  
 	> ggplot(ToothGrowth,aes(factor(dose),len,fill=factor(supp))) + geom_boxplot() + scale_fill_manual(values=c("yellow","orange"))  
 
-![Boxplot](/images/toothgrowth.jpg)
+![Boxplot](/images/toothgrowth.png)
 
 As we can see, the highest dose produces the most significant results, with OJ being more effective except or the highest dose of 2 mg, when both delivery methods are equally effective.
