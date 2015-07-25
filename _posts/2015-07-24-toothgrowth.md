@@ -25,7 +25,7 @@ The two delivery methods are orange juice (OJ) and ascorbic acid (VC).
 	#Now I can see that we have varying dosage amounts, 2 different ways of supplying the dose, and of course resulting tooth growth.
 	> library(reshape2)  
 	> library(ggplot2)  
-	> ggplot(ToothGrowth,aes(factor(dose),len,fill=factor(supp))) + geom_boxplot() + scale_fill_manual(values=c("yellow","orange"))  
+	> ggplot(ToothGrowth,aes(factor(dose),len,fill=factor(supp))) + geom_boxplot() + scale_fill_manual(values=c("#56B4E9","#0072B2"))    
 
 ![Boxplot](/images/toothgrowth.png)
 
