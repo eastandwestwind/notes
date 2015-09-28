@@ -22,7 +22,7 @@ I have a couple entries to exclude, so I do this:
 
 	>excludeid<-c(31277656065,31349627905,32293885953,32316235777,32378504193,32895147009,32982722561,33025049601,33489939457)
 	>dfmerge<-lapply(excludeid,function(i){
-	+	dfmerge[!grepl(i,dfmerge$SharpSpringID),]
+	+	dfmerge[!grepl(i,dfmerge$ID),]
 	+})
 
 To retreive general stats about the email campaigns as a whole:
