@@ -3,7 +3,7 @@ layout: post_page
 title: R merge multiple files
 ---
 
-I've got email marketing data in 6 separate files, one for each email campain. I need to merge these together to find general stats.
+I've got email marketing data in 6 separate files, one for each email campaign. I need to merge these together to find general stats.
 
 	>setwd("/Users/csmith/Dropbox/emails")
 	>df1<-read.csv("email1.csv",header=TRUE,row.names=NULL)
