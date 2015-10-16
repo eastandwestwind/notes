@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: Methods to remove rows and columns
+title: Remove rows and columns in R
 ---
 
 
@@ -32,6 +32,13 @@ Remove row if column does not match i. See how df[,1] references the first colum
 Remove row if column matches values in a list
 
 	df<-df[!df$column %in% c(1,2,3,4),]
+
+Or use grepl!
+
+	excludeid<-c(200,201,342,908,22,57,83,445)
+	dfmerge<-lapply(excludeid,function(i){
+		dfmerge[!grepl(i,dfmerge$ID),]
+	})
 
 Or use sqldf!! This basically says select everything from the dataframe where values in a certain column don't match other values.
 	
