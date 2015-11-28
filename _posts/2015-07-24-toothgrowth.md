@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: boxplot: tooth growth
+title: boxplot - tooth growth
 ---
 
 In this blog, I take a look at "The Effect of Vitamin C on Tooth Growth in Guinea Pigs," a study with data that comes default with R.  
