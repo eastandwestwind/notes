@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: Remove rows and columns in R
+title: remove rows and columns
 ---
 
 

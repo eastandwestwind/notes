@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: R merge multiple files
+title: merge multiple data frames
 ---
 
 Just a short post on using he reduce function to merge together multiple files.
@@ -20,4 +20,4 @@ Now that I've read in all 6 files, I merge them together.
 	>dfmerge<-Reduce(function(x, y) merge(x, y, all=TRUE), list(df1, df2, df3,df4,df5,df6))
 	>write.csv(dfmerge,file="merge.csv",row.names=FALSE)
 
-
+For other merging, check out cbind and rbind.
