@@ -40,7 +40,7 @@ gapi.analytics.ready(function() {
   // viewSelector.execute();
 
 /*assign view id*/
-view=70707956
+view='ga:70707956'
 
 
   /**
@@ -99,21 +99,21 @@ view=70707956
   /**
    * Update both charts whenever the selected view changes.
    */
-  viewSelector.on('change', function(ids) {
-    var options = {query: {ids: ids}};
+  // viewSelector.on('change', function(ids) {
+  //   var options = {query: {ids: ids}};
 
-    // Clean up any event listeners registered on the main chart before
-    // rendering a new one.
-    if (mainChartRowClickListener) {
-      google.visualization.events.removeListener(mainChartRowClickListener);
-    }
+  //   // Clean up any event listeners registered on the main chart before
+  //   // rendering a new one.
+  //   if (mainChartRowClickListener) {
+  //     google.visualization.events.removeListener(mainChartRowClickListener);
+  //   }
 
-    mainChart.set(options).execute();
-    breakdownChart.set(options);
+  //   mainChart.set(options).execute();
+  //   breakdownChart.set(options);
 
-    // Only render the breakdown chart if a medium filter has been set.
-    if (breakdownChart.get().query.filters) breakdownChart.execute();
-  });
+  //   // Only render the breakdown chart if a medium filter has been set.
+  //   if (breakdownChart.get().query.filters) breakdownChart.execute();
+  // });
 
 
   /**
