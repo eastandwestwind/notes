@@ -99,18 +99,18 @@ gapi.analytics.ready(function() {
   // viewSelector.on('change', function(ids) {
   //   var options = {query: {ids: ids}};
 
-  //   // Clean up any event listeners registered on the main chart before
-  //   // rendering a new one.
-  //   if (mainChartRowClickListener) {
-  //     google.visualization.events.removeListener(mainChartRowClickListener);
-  //   }
+    // Clean up any event listeners registered on the main chart before
+    // rendering a new one.
+    if (mainChartRowClickListener) {
+      google.visualization.events.removeListener(mainChartRowClickListener);
+    }
 
-  //   mainChart.set(options).execute();
-  //   breakdownChart.set(options);
+    mainChart.set(options).execute();
+    breakdownChart.set(options);
 
-  //   // Only render the breakdown chart if a medium filter has been set.
-  //   if (breakdownChart.get().query.filters) breakdownChart.execute();
-  // });
+    // Only render the breakdown chart if a medium filter has been set.
+    if (breakdownChart.get().query.filters) breakdownChart.execute();
+  });
 
 
   /**
