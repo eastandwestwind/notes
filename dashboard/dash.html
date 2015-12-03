@@ -28,16 +28,20 @@ gapi.analytics.ready(function() {
   });
 
 
-  /**
-   * Create a new ViewSelector instance to be rendered inside of an
-   * element with the id "view-selector-container".
-   */
-  var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector-container'
-  });
+  // *
+  //  * Create a new ViewSelector instance to be rendered inside of an
+  //  * element with the id "view-selector-container".
+   
+  // var viewSelector = new gapi.analytics.ViewSelector({
+  //   container: 'view-selector-container'
+  // });
 
   // Render the view selector to the page.
-  viewSelector.execute();
+  // viewSelector.execute();
+
+/*assign view id*/
+view=70707956
+
 
   /**
    * Create a table chart showing top mediums for users to interact with.
@@ -46,6 +50,7 @@ gapi.analytics.ready(function() {
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': view,
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -67,6 +72,7 @@ gapi.analytics.ready(function() {
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': view,
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
