@@ -8,11 +8,21 @@
 </script>
 
 <div id="embed-api-auth-container"></div>
+<div id="view-selector-container"></div>
 <div id="main-chart-container"></div>
 <div id="breakdown-chart-container"></div>
 
 
-<script>
+<!--    */
+    clientid: '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com'
+  }); -->
+
+
+
+
+ <script>
+
+var GID = {query: {ids:'ga:70707956'}};
 
 gapi.analytics.ready(function() {
 
@@ -26,28 +36,26 @@ gapi.analytics.ready(function() {
     clientid: '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com'
   });
 
-var GID = {query: {ids:'ga:70707956'}};
-  // *
-  //  * Create a new ViewSelector instance to be rendered inside of an
-  //  * element with the id "view-selector-container".
-   
+
+  /**
+   * Create a new ViewSelector instance to be rendered inside of an
+   * element with the id "view-selector-container".
+   */
   // var viewSelector = new gapi.analytics.ViewSelector({
   //   container: 'view-selector-container'
   // });
 
   // Render the view selector to the page.
-  // viewSelector.execute();
-
+  viewSelector.execute();
 
   /**
-   * Create a table chart showing top mediums for users to interact with.
+   * Create a table chart showing top browsers for users to interact with.
    * Clicking on a row in the table will update a second timeline chart with
-   * data from the selected medium.
+   * data from the selected browser.
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': 'ga:70707956',
-      'dimensions': 'ga:medium',
+      'dimensions': 'ga:browser',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
       'max-results': '6'
@@ -63,12 +71,11 @@ var GID = {query: {ids:'ga:70707956'}};
 
 
   /**
-   * Create a timeline chart showing sessions over time for the medium the
+   * Create a timeline chart showing sessions over time for the browser the
    * user selected in the main chart.
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': 'ga:70707956',
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
@@ -107,7 +114,7 @@ var GID = {query: {ids:'ga:70707956'}};
     mainChart.set(GID).execute();
     breakdownChart.set(GID);
 
-    // Only render the breakdown chart if a medium filter has been set.
+    // Only render the breakdown chart if a browser filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
   });
 
@@ -115,7 +122,7 @@ var GID = {query: {ids:'ga:70707956'}};
   /**
    * Each time the main chart is rendered, add an event listener to it so
    * that when the user clicks on a row, the line chart is updated with
-   * the data from the medium in the clicked row.
+   * the data from the browser in the clicked row.
    */
   mainChart.on('success', function(response) {
 
@@ -131,14 +138,14 @@ var GID = {query: {ids:'ga:70707956'}};
       if (!chart.getSelection().length) return;
 
       var row =  chart.getSelection()[0].row;
-      var medium =  dataTable.getValue(row, 0);
+      var browser =  dataTable.getValue(row, 0);
       var options = {
         query: {
-          filters: 'ga:medium==' + medium
-        }
+          filters: 'ga:browser==' + browser
+        },
         chart: {
           options: {
-            title: medium
+            title: browser
           }
         }
       };
@@ -146,5 +153,6 @@ var GID = {query: {ids:'ga:70707956'}};
       breakdownChart.set(GID).execute();
     });
   });
+
 });
 </script>
