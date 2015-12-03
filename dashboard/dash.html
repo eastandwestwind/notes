@@ -39,9 +39,6 @@ gapi.analytics.ready(function() {
   // Render the view selector to the page.
   // viewSelector.execute();
 
-/*assign view id*/
-view='ga:70707956'
-
 
   /**
    * Create a table chart showing top mediums for users to interact with.
@@ -50,7 +47,7 @@ view='ga:70707956'
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': view,
+      'ids': 'ga:70707956',
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -72,7 +69,7 @@ view='ga:70707956'
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': view,
+      'ids': 'ga:70707956',
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
