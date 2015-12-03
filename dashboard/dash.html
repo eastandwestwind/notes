@@ -135,7 +135,7 @@ gapi.analytics.ready(function() {
       var options = {
         query: {
           filters: 'ga:medium==' + medium
-        },
+        }
         chart: {
           options: {
             title: medium
@@ -146,6 +146,5 @@ gapi.analytics.ready(function() {
       breakdownChart.set(options).execute();
     });
   });
-breakdownChart.execute();
 });
 </script>
