@@ -104,8 +104,8 @@ gapi.analytics.ready(function() {
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.set(options).execute();
-    breakdownChart.set(options);
+    mainChart.execute();
+    breakdownChart;
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
@@ -143,7 +143,7 @@ gapi.analytics.ready(function() {
         }
       };
 
-      breakdownChart.set(options).execute();
+      breakdownChart.execute();
     });
   });
 });
