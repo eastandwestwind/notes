@@ -99,14 +99,14 @@ gapi.analytics.ready(function() {
     clientid: '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com'
   });
 
-
+var GID = {query: {ids:'ga:1801094'}};
   /**
    * Create a new ViewSelector instance to be rendered inside of an
    * element with the id "view-selector-container".
    */
-  var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector-container'
-  });
+  // var viewSelector = new gapi.analytics.ViewSelector({
+  //   container: 'view-selector-container'
+  // });
 
   // Render the view selector to the page.
   // viewSelector.execute();
@@ -176,8 +176,8 @@ gapi.analytics.ready(function() {
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.set(options).execute();
-    breakdownChart.set(options);
+    mainChart.set(GID).execute();
+    breakdownChart.set(GID);
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
@@ -215,7 +215,7 @@ gapi.analytics.ready(function() {
         }
       };
 
-      breakdownChart.set(options).execute();
+      breakdownChart.set(GID).execute();
     });
   });
 
