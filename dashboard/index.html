@@ -168,7 +168,7 @@ gapi.analytics.ready(function() {
    * Update both charts whenever the selected view changes.
    */
   viewSelector.on('change', function(ids) {
-    var options = {query: {ids: ids}};
+    var options = {query: {ids: 'ga:1801094'}};
 
     // Clean up any event listeners registered on the main chart before
     // rendering a new one.
