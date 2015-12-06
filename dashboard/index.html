@@ -76,7 +76,7 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1 align="center">Welcome to your dashboard!</h1>
+        <h1 align="center">Welcome to your dashboard</h1>
 <div align="center" id="view-selector-container"></div>
 <div class="row">
   <div class="col-md-6" id="main-chart-container"></div>
@@ -118,6 +118,7 @@ gapi.analytics.ready(function() {
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': 'ga:1801094',
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -139,6 +140,7 @@ gapi.analytics.ready(function() {
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': 'ga:1801094',
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
