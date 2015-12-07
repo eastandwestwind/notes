@@ -67,7 +67,7 @@
             <li class="active"><a href="index.html">PJA Advertising + Marketing</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
-            <li id="embed-api-auth-container" align="right" font color="white"></li>
+            <li><a href="login" id="embed-api-auth-container" align="right" font color="white"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -118,7 +118,6 @@ var GID = {query: {ids:'ga:1801094'}};
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': 'ga:1801094',
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -140,7 +139,6 @@ var GID = {query: {ids:'ga:1801094'}};
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': 'ga:1801094',
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
@@ -177,7 +175,7 @@ var GID = {query: {ids:'ga:1801094'}};
     }
 
     mainChart.set(GID).execute();
-    breakdownChart.set(GID);
+    breakdownChart.set(options);
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
