@@ -165,8 +165,8 @@ var GID = {query: {ids:'ga:1801094'}};
   /**
    * Update both charts whenever the selected view changes.
    */
-  viewSelector.on('change', function(ids) {
-    var options = {query: {ids: 'ga:1801094'}};
+  // // viewSelector.on('change', function(ids) {
+  //   var options = {query: {ids: 'ga:1801094'}};
 
     // Clean up any event listeners registered on the main chart before
     // rendering a new one.
@@ -174,8 +174,8 @@ var GID = {query: {ids:'ga:1801094'}};
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.set(options).execute();
-    breakdownChart.set(options);
+    mainChart.set(GID).execute();
+    breakdownChart.set(GID);
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
@@ -202,7 +202,7 @@ var GID = {query: {ids:'ga:1801094'}};
 
       var row =  chart.getSelection()[0].row;
       var medium =  dataTable.getValue(row, 0);
-      var options = {
+      var GID = {
         query: {
           filters: 'ga:medium==' + medium
         },
@@ -213,7 +213,7 @@ var GID = {query: {ids:'ga:1801094'}};
         }
       };
 
-      breakdownChart.set(options).execute();
+      breakdownChart.set(GID).execute();
     });
   });
 
