@@ -174,7 +174,7 @@ var GID = {query: {ids:'ga:1801094'}};
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.set(GID).execute();
+    mainChart.set(options).execute();
     breakdownChart.set(options);
 
     // Only render the breakdown chart if a medium filter has been set.
@@ -213,7 +213,7 @@ var GID = {query: {ids:'ga:1801094'}};
         }
       };
 
-      breakdownChart.set(GID).execute();
+      breakdownChart.set(options).execute();
     });
   });
 
