@@ -97,6 +97,7 @@ gapi.analytics.ready(function() {
   gapi.analytics.auth.authorize({
     container: 'embed-api-auth-container',
     clientid: '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com'
+    userInfoLabel:""
   });
 
 var GID = 'ga:1801094';
@@ -117,7 +118,7 @@ var GID = 'ga:1801094';
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': GID,
+      'ids': "ga:1801094",
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -139,7 +140,7 @@ var GID = 'ga:1801094';
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
-      'ids': GID,
+      'ids': "ga:1801094",
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
@@ -166,8 +167,8 @@ var GID = 'ga:1801094';
   /**
    * Update both charts whenever the selected view changes.
    */
-  // // viewSelector.on('change', function(ids) {
-  //   var options = {query: {ids: 'ga:1801094'}};
+  viewSelector.on('change', function(ids) {
+    var options = {query: {ids: 'ga:1801094'}};
 
     // Clean up any event listeners registered on the main chart before
     // rendering a new one.
@@ -175,8 +176,8 @@ var GID = 'ga:1801094';
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.execute();
-    breakdownChart;
+    mainChart.set(options).execute();
+    breakdownChart.set(options);
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
