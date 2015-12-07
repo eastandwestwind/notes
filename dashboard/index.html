@@ -55,11 +55,11 @@
   <body>
 
  <script>
-(function(w,d,s,g,js,fs){
-  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
-  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+(function(w,d,s,g,js,fjs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
+  js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
   js.src='https://apis.google.com/js/platform.js';
-  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+  fjs.parentNode.insertBefore(js,fjs);js.onload=function(){g.load('analytics')};
 }(window,document,'script'));
 </script>
 
@@ -79,7 +79,7 @@
             <li class="active"><a href="index.html">PJA Advertising + Marketing</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><div id="embed-api-auth-container" align="right" font color="white"></div></li>
+            <li><a href="signin" id="embed-api-auth-container" align="right" font color="white"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -89,7 +89,6 @@
 
       <div class="starter-template">
         <h1 align="center">Welcome to your dashboard</h1>
-
 <div id="auth-button"></div>
 <div id="timeline"></div>
       </div><!-- /.starter.template -->
