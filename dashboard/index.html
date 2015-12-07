@@ -99,7 +99,7 @@ gapi.analytics.ready(function() {
     clientid: '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com'
   });
 
-var GID = {query: {ids:'ga:1801094'}};
+var GID = 'ga:1801094';
   /**
    * Create a new ViewSelector instance to be rendered inside of an
    * element with the id "view-selector-container".
@@ -108,8 +108,7 @@ var GID = {query: {ids:'ga:1801094'}};
   //   container: 'view-selector-container'
   // });
 
-  // Render the view selector to the page.
-  viewSelector.execute();
+
 
   /**
    * Create a table chart showing top mediums for users to interact with.
@@ -118,6 +117,7 @@ var GID = {query: {ids:'ga:1801094'}};
    */
   var mainChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': GID,
       'dimensions': 'ga:medium',
       'metrics': 'ga:sessions',
       'sort': '-ga:sessions',
@@ -139,6 +139,7 @@ var GID = {query: {ids:'ga:1801094'}};
    */
   var breakdownChart = new gapi.analytics.googleCharts.DataChart({
     query: {
+      'ids': GID,
       'dimensions': 'ga:date',
       'metrics': 'ga:sessions',
       'start-date': '7daysAgo',
@@ -174,8 +175,8 @@ var GID = {query: {ids:'ga:1801094'}};
       google.visualization.events.removeListener(mainChartRowClickListener);
     }
 
-    mainChart.set(GID).execute();
-    breakdownChart.set(GID);
+    mainChart.execute();
+    breakdownChart;
 
     // Only render the breakdown chart if a medium filter has been set.
     if (breakdownChart.get().query.filters) breakdownChart.execute();
@@ -202,7 +203,7 @@ var GID = {query: {ids:'ga:1801094'}};
 
       var row =  chart.getSelection()[0].row;
       var medium =  dataTable.getValue(row, 0);
-      var GID = {
+      var options = {
         query: {
           filters: 'ga:medium==' + medium
         },
@@ -213,7 +214,7 @@ var GID = {query: {ids:'ga:1801094'}};
         }
       };
 
-      breakdownChart.set(GID).execute();
+      breakdownChart.set(options).execute();
     });
   });
 
