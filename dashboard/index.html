@@ -122,7 +122,7 @@
 
       <div class="starter-template">
         <h1 align="center">Welcome to your dashboard</h1>
-<div id="timeline"></div>
+        <div id="timeline"></div>
       </div><!-- /.starter.template -->
 
     </div><!-- /.container -->
@@ -221,7 +221,9 @@ function processProfiles() {
   console.log('this week',moment(now).subtract(8, 'day').format('YYYY-MM-DD'),moment(now).subtract(1,'day').format('YYYY-MM-DD') );
   console.log('last week',moment(now).subtract(15, 'day').format('YYYY-MM-DD'),moment(now).subtract(8,'day').format('YYYY-MM-DD') );
   //console.log('last week',moment(now).subtract(1, 'day').day(0).subtract(1, 'week').format('YYYY-MM-DD'),moment(now).subtract(1, 'day').day(6).subtract(1, 'week').format('YYYY-MM-DD') )
-  var id = profiles[curProfile].id;
+  // var id = profiles[curProfile].id;
+
+  var id = "ga:1801094";
   
   var thisWeek = query({
     'ids': id,
