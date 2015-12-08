@@ -124,6 +124,7 @@
 
       <div class="starter-template">
         <h1 align="center">Welcome to your dashboard</h1>
+        <div id="active-users-container"></div>
         <div id="timeline"></div>
       </div><!-- /.starter.template -->
 
@@ -165,6 +166,40 @@
   Chart.defaults.global.maintainAspectRatio = false;
   
 });
+
+/**
+   * Create a new ActiveUsers instance to be rendered inside of an
+   * element with the id "active-users-container" and poll for changes every
+   * five seconds.
+   */
+  var activeUsers = new gapi.analytics.ext.ActiveUsers({
+    container: 'active-users-container',
+    pollingInterval: 5
+  });
+  var id = "ga:1801094";
+
+  /**
+   * Add CSS animation to visually show the when users come and go.
+   */
+  activeUsers.once('success', function() {
+    var element = this.container.firstChild;
+    var timeout;
+
+    this.on('change', function(data) {
+      var element = this.container.firstChild;
+      var animationClass = data.delta > 0 ? 'is-increasing' : 'is-decreasing';
+      element.className += (' ' + animationClass);
+
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        element.className =
+            element.className.replace(/ is-(increasing|decreasing)/g, '');
+      }, 3000);
+    });
+  });
+
+activeUsers.set(id).execute();
+
 
 var profiles;
 var curProfile = 0;
@@ -224,7 +259,6 @@ function processProfiles() {
   console.log('last week',moment(now).subtract(15, 'day').format('YYYY-MM-DD'),moment(now).subtract(8,'day').format('YYYY-MM-DD') );
   //console.log('last week',moment(now).subtract(1, 'day').day(0).subtract(1, 'week').format('YYYY-MM-DD'),moment(now).subtract(1, 'day').day(6).subtract(1, 'week').format('YYYY-MM-DD') )
   // var id = profiles[curProfile].id;
-
   var id = "ga:1801094";
   
   var thisWeek = query({
