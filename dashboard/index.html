@@ -42,6 +42,7 @@
      formatting and manipulation. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <!-- Include the ViewSelector2 component script. -->
 <script src="/public/javascript/embed-api/components/view-selector2.js"></script>
 
@@ -50,6 +51,38 @@
 
 <!-- Include the ActiveUsers component script. -->
 <script src="/public/javascript/embed-api/components/active-users.js"></script>
+
+<style>
+    
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .reportContainer {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .chartContainer {
+    width: 500px;
+    height: 200px;
+  }
+  
+  .chartTitleContainer {
+    width: 500px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  .up {
+    color: green;
+  }
+  .down {
+    color: red;
+  }
+  </style>
   </head>
 
   <body>
@@ -79,7 +112,7 @@
             <li class="active"><a href="index.html">PJA Advertising + Marketing</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><a href="signin" id="embed-api-auth-container" align="right" font color="white"></a></li>
+            <li><a href="signin" id="auth-button" align="right" font color="white"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -89,7 +122,7 @@
 
       <div class="starter-template">
         <h1 align="center">Welcome to your dashboard</h1>
-<div id="auth-button"></div>
+<div id="timeline"></div>
       </div><!-- /.starter.template -->
 
     </div><!-- /.container -->
@@ -108,7 +141,7 @@
   var CLIENT_ID = '785100694353-q0bjtiu1aiqjjm4oqremg0gpvjkl3p77.apps.googleusercontent.com';
 
   gapi.analytics.auth.authorize({
-    container: 'embed-api-auth-container',
+    container: 'auth-button',
     clientid: CLIENT_ID,
     userInfoLabel:""
   });
@@ -131,6 +164,8 @@
   
 });
 
+var profiles;
+var curProfile = 0;
 
  function getProfiles(cb) {
   //do we have a cached version?
@@ -182,6 +217,10 @@ function processProfiles() {
   console.log("working on profile "+profiles[curProfile].name);
   
   var now = moment();
+  console.log('this week',moment(now).subtract(1, 'day').day(0).format('YYYY-MM-DD'),moment(now).format('YYYY-MM-DD') );
+  console.log('this week',moment(now).subtract(8, 'day').format('YYYY-MM-DD'),moment(now).subtract(1,'day').format('YYYY-MM-DD') );
+  console.log('last week',moment(now).subtract(15, 'day').format('YYYY-MM-DD'),moment(now).subtract(8,'day').format('YYYY-MM-DD') );
+  //console.log('last week',moment(now).subtract(1, 'day').day(0).subtract(1, 'week').format('YYYY-MM-DD'),moment(now).subtract(1, 'day').day(6).subtract(1, 'week').format('YYYY-MM-DD') )
   var id = profiles[curProfile].id;
   
   var thisWeek = query({
