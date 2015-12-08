@@ -295,11 +295,11 @@ function processProfiles() {
 
     new Chart(makeCanvas('chart-'+curProfile+'-container')).Line(data);
 
-    if(curProfile+1 < profiles.length) {
-      curProfile++;
-      //settimeout to try to avoid GA rate limits
-      setTimeout(processProfiles,200);
-    }
+    // if(curProfile+1 < profiles.length) {
+    //   curProfile++;
+    //   //settimeout to try to avoid GA rate limits
+    //   setTimeout(processProfiles,200);
+    // }
   });
 }
 
