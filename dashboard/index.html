@@ -282,7 +282,7 @@ function processProfiles() {
       ]
     };
 
-    var titleStr = Overall Visits + " ";
+    var titleStr = profiles[curProfile].name + " ";
     if(totalLastWeek > 0 && totalThisWeek > 0) {
       if(percChange < 0) {
         titleStr += "<span class='down'>(Down "+Math.abs(percChange) + "%)</span>";
