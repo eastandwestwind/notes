@@ -126,6 +126,8 @@
         <h1 align="center">Welcome to your dashboard</h1>
         <div id="active-users-container"></div>
         <div id="timeline"></div>
+        <div id="chart-1-container"></div>
+<div id="legend-1-container"></div>
       </div><!-- /.starter.template -->
 
     </div><!-- /.container -->
@@ -200,6 +202,66 @@
 //   });
 
 // activeUsers.execute();
+
+function renderWeekOverWeekChart(ids) {
+
+    // Adjust `now` to experiment with different days, for testing only...
+    var now = moment(); // .subtract(3, 'day');
+
+    var thisWeek = query({
+      'ids': "ga:1801094",
+      'dimensions': 'ga:date,ga:nthDay',
+      'metrics': 'ga:sessions',
+      'start-date': moment(now).subtract(1, 'day').day(0).format('YYYY-MM-DD'),
+      'end-date': moment(now).format('YYYY-MM-DD')
+    });
+
+    var lastWeek = query({
+      'ids': "ga:1801094",
+      'dimensions': 'ga:date,ga:nthDay',
+      'metrics': 'ga:sessions',
+      'start-date': moment(now).subtract(1, 'day').day(0).subtract(1, 'week')
+          .format('YYYY-MM-DD'),
+      'end-date': moment(now).subtract(1, 'day').day(6).subtract(1, 'week')
+          .format('YYYY-MM-DD')
+    });
+
+    Promise.all([thisWeek, lastWeek]).then(function(results) {
+
+      var data1 = results[0].rows.map(function(row) { return +row[2]; });
+      var data2 = results[1].rows.map(function(row) { return +row[2]; });
+      var labels = results[1].rows.map(function(row) { return +row[0]; });
+
+      labels = labels.map(function(label) {
+        return moment(label, 'YYYYMMDD').format('ddd');
+      });
+
+      var data = {
+        labels : labels,
+        datasets : [
+          {
+            label: 'Last Week',
+            fillColor : 'rgba(220,220,220,0.5)',
+            strokeColor : 'rgba(220,220,220,1)',
+            pointColor : 'rgba(220,220,220,1)',
+            pointStrokeColor : '#fff',
+            data : data2
+          },
+          {
+            label: 'This Week',
+            fillColor : 'rgba(151,187,205,0.5)',
+            strokeColor : 'rgba(151,187,205,1)',
+            pointColor : 'rgba(151,187,205,1)',
+            pointStrokeColor : '#fff',
+            data : data1
+          }
+        ]
+      };
+
+      new Chart(makeCanvas('chart-1-container')).Line(data);
+      generateLegend('legend-1-container', data.datasets);
+    });
+  }
 
 
 var profiles;
