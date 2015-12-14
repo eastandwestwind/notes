@@ -365,10 +365,12 @@ function processProfiles() {
   // var id = profiles[curProfile].id;
   var id = "ga:1801094";
   
+// begin queries
+
   var thisWeek = query({
     'ids': id,
     'dimensions': 'ga:date,ga:nthDay',
-    'metrics': 'ga:pageviews',
+    'metrics': 'ga:sessions',
     'start-date': moment(now).subtract(8, 'day').format('YYYY-MM-DD'),
     'end-date': moment(now).subtract(1,'day').format('YYYY-MM-DD')
   });
@@ -376,14 +378,16 @@ function processProfiles() {
   var lastWeek = query({
     'ids': id,
     'dimensions': 'ga:date,ga:nthDay',
-    'metrics': 'ga:pageviews',
+    'metrics': 'ga:sessions',
     'start-date': moment(now).subtract(15, 'day').subtract(1, 'week')
     .format('YYYY-MM-DD'),
     'end-date': moment(now).subtract(8, 'day').subtract(1, 'week')
     .format('YYYY-MM-DD')
   });
     
-    
+// end queries
+
+
   Promise.all([thisWeek, lastWeek]).then(function(results) {
     console.log("Promise.all");console.dir(results);
       
@@ -391,11 +395,13 @@ function processProfiles() {
     var data2 = results[1].rows.map(function(row) { return +row[2]; });
     var labels = results[1].rows.map(function(row) { return +row[0]; });
 
-    var totalThisWeek = results[0].totalsForAllResults["ga:pageviews"];
-    var totalLastWeek = results[1].totalsForAllResults["ga:pageviews"];
+    var totalThisWeek = results[0].totalsForAllResults["ga:sessions"];
+    var totalLastWeek = results[1].totalsForAllResults["ga:sessions"];
     var percChange = (((totalThisWeek - totalLastWeek) / totalLastWeek) * 100).toFixed(2);
     console.log(totalLastWeek, totalThisWeek, percChange);
     
+// add labels
+
     labels = labels.map(function(label) {
       return moment(label, 'YYYYMMDD').format('ddd');
     });
@@ -422,6 +428,7 @@ function processProfiles() {
       ]
     };
 
+
     var titleStr = "Overall Visits" + " ";
     if(totalLastWeek > 0 && totalThisWeek > 0) {
       if(percChange < 0) {
@@ -430,7 +437,9 @@ function processProfiles() {
         titleStr += "<span class='up'>(Up "+percChange + "%)</span>";      
       }
     }
-        
+
+// append to body
+
     $("body").append("<div class='reportContainer'><div class='chartTitleContainer'>"+titleStr+"</div><div class='chartContainer' id='chart-"+curProfile+"-container'></div></div>");
 
     new Chart(makeCanvas('chart-'+curProfile+'-container')).Line(data);
