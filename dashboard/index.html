@@ -354,10 +354,14 @@ function makeCanvas(id) {
   return ctx;
 }
       
-  var id = "ga:1801094";
-
 function processProfiles() {
-  console.log("working on profile "+id.name);
+  for (i in profiles) {
+    if (profiles[i].id=="ga:1801094"){
+      curProfile=i
+    }
+  }
+  
+  console.log("working on profile "+profiles[curProfile].name);
   
   var now = moment();
   console.log('this week',moment(now).subtract(1, 'day').day(0).format('YYYY-MM-DD'),moment(now).format('YYYY-MM-DD') );
@@ -365,7 +369,7 @@ function processProfiles() {
   console.log('last week',moment(now).subtract(15, 'day').format('YYYY-MM-DD'),moment(now).subtract(8,'day').format('YYYY-MM-DD') );
   //console.log('last week',moment(now).subtract(1, 'day').day(0).subtract(1, 'week').format('YYYY-MM-DD'),moment(now).subtract(1, 'day').day(6).subtract(1, 'week').format('YYYY-MM-DD') )
   // var id = profiles[curProfile].id;
-
+  var id = "ga:1801094";
   
 // begin queries
 
