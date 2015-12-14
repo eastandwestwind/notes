@@ -354,8 +354,10 @@ function makeCanvas(id) {
   return ctx;
 }
       
+  var id = "ga:1801094";
+
 function processProfiles() {
-  console.log("working on profile "+profiles[curProfile].name);
+  console.log("working on profile "+id.name);
   
   var now = moment();
   console.log('this week',moment(now).subtract(1, 'day').day(0).format('YYYY-MM-DD'),moment(now).format('YYYY-MM-DD') );
@@ -363,7 +365,7 @@ function processProfiles() {
   console.log('last week',moment(now).subtract(15, 'day').format('YYYY-MM-DD'),moment(now).subtract(8,'day').format('YYYY-MM-DD') );
   //console.log('last week',moment(now).subtract(1, 'day').day(0).subtract(1, 'week').format('YYYY-MM-DD'),moment(now).subtract(1, 'day').day(6).subtract(1, 'week').format('YYYY-MM-DD') )
   // var id = profiles[curProfile].id;
-  var id = "ga:1801094";
+
   
 // begin queries
 
@@ -429,7 +431,7 @@ function processProfiles() {
     };
 
 
-    var titleStr = "Overall Visits" + " ";
+    var titleStr = "Sessions" + " ";
     if(totalLastWeek > 0 && totalThisWeek > 0) {
       if(percChange < 0) {
         titleStr += "<span class='down'>(Down "+Math.abs(percChange) + "%)</span>";
@@ -444,11 +446,6 @@ function processProfiles() {
 
     new Chart(makeCanvas('chart-'+curProfile+'-container')).Line(data);
 
-    // if(curProfile+1 < profiles.length) {
-    //   curProfile++;
-    //   //settimeout to try to avoid GA rate limits
-    //   setTimeout(processProfiles,200);
-    // }
   });
 }
 
