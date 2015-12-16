@@ -114,7 +114,7 @@
             <li class="active"><a href="index.html">PJA Advertising + Marketing</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><a href="signin" id="auth-button" align="right" font color="white"></a></li>
+            <li id="auth-button" align="right" font color="white"></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -319,7 +319,7 @@ var curProfile = 0;
   gapi.client.analytics.management.accounts.list().then(function(res) { 
     var accountId = res.result.items[0].id;
     var profiles = [];
-    gapi.client.analytics.management.webproperties.list({'accountId': accountId}).then(function(res) {
+    gapi.client.analytics.management.webproperties.list({'accountId': '1028024'}).then(function(res) {
   
       res.result.items.forEach(function(item) {
         if(item.defaultProfileId) profiles.push({id:"ga:"+item.defaultProfileId,name:item.name});
@@ -329,6 +329,7 @@ var curProfile = 0;
     });
   });
 }
+
 
 
 //Credit: https://ga-dev-tools.appspot.com/embed-api/third-party-visualizations/
@@ -360,7 +361,7 @@ function processProfiles() {
       curProfile=i
     }
   }
-  
+
   console.log("working on profile "+profiles[curProfile].name);
   
   var now = moment();
