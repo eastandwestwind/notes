@@ -372,7 +372,7 @@ function processProfiles() {
   // var id = profiles[curProfile].id;
   var id = "ga:1801094";
   
-// begin queries
+// begin queries for week by week
 
   var thisWeek = query({
     'ids': id,
@@ -392,8 +392,10 @@ function processProfiles() {
     .format('YYYY-MM-DD')
   });
     
+
 // end queries
 
+// calculate percChange for week by week
 
   Promise.all([thisWeek, lastWeek]).then(function(results) {
     console.log("Promise.all");console.dir(results);
@@ -406,8 +408,9 @@ function processProfiles() {
     var totalLastWeek = results[1].totalsForAllResults["ga:sessions"];
     var percChange = (((totalThisWeek - totalLastWeek) / totalLastWeek) * 100).toFixed(2);
     console.log(totalLastWeek, totalThisWeek, percChange);
-    
-// add labels
+
+
+// add labels for week by week
 
     labels = labels.map(function(label) {
       return moment(label, 'YYYYMMDD').format('ddd');
@@ -436,6 +439,8 @@ function processProfiles() {
     };
 
 
+// title for week by week
+
     var titleStr = "Sessions" + " ";
     if(totalLastWeek > 0 && totalThisWeek > 0) {
       if(percChange < 0) {
@@ -445,6 +450,7 @@ function processProfiles() {
       }
     }
 
+
 // append to body
 
     $("body").append("<div class='reportContainer'><div class='chartTitleContainer'>"+titleStr+"</div><div class='chartContainer' id='chart-"+curProfile+"-container'></div></div>");
@@ -453,6 +459,8 @@ function processProfiles() {
 
   });
 }
+
+
 
 </script>
 
