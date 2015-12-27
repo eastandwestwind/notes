@@ -1,5 +1,4 @@
 ---
-layout: post_page
 title: remove rows and columns
 ---
 

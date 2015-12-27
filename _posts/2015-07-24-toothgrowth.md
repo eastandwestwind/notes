@@ -1,5 +1,4 @@
 ---
-layout: post_page
 title: boxplot - tooth growth
 ---
 
