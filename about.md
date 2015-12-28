@@ -1,5 +1,5 @@
 ---
-title: Catherine Smith
+title: Catherine
 ---
 
 **ABOUT**
@@ -12,7 +12,10 @@ In my free time, I enjoy romping around outdoors, <a class="ga-event" data-ga-ca
 
 **SKILLS/TOOLS**
 
-Google Analytics/Adwords/Tag Manager/Webmaster Tools, Excel, WordPress, Tableau, Git, HTML/CSS, R (sqldf, ggplot2, grep, caret, TwitteR, RGA), SQL, Python, Adobe Creative Suite, MailChimp, web development, marketing analytics/strategy, data scraping, data visualization, data wranging ("munging"), statistical analysis, UX 
+**Google:** Analytics, Adwords, Tag Manager, Webmaster Tools 
+**R:** sqldf, ggplot2, grep, caret, e1071, TwitteR, RGA
+
+Git, HTML/CSS, SQL, Python, Excel, WordPress, Tableau, Adobe Creative Suite, web development, marketing analytics/strategy, data scraping, data visualization, data wranging ("munging"), statistical analysis, UX 
 
 
 **CONTACT**

@@ -1,11 +1,11 @@
 # Site Info
-title:              "Website of Catherine Smith"
+title:              "Catherine's Website"
 description:        "Writings on Data, Analytics, R, Machine Learning"
 google_verify:      epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o # Put your Google Verification here
 google_analytics:   UA-64729638-1 # Put your Google Analytics code
 
 # Author Info
-author_name:        "Catherine Smith"
+author_name:        "Catherine"
 author_email:       eastandwestwind@gmail.com
 author_gravatar:    0f2c8abeb96f5bb74e9ee9876513bd06 # Gravatar md5 hash
 twitter_username:   eastandwestwind
