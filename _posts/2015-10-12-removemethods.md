@@ -1,5 +1,5 @@
 ---
-title: remove rows and columns
+title: R tutorial- Data Munging Part 3
 ---
 
 

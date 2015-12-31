@@ -1,5 +1,5 @@
 ---
-title: import .csv, create boxplot
+title: R tutorial- Getting Started Part 1
 ---
 
 Hello, this post is not so much intended as a how-to, rather more as a code journal for myself and for others as an example of how I went from A to B to C, etc.

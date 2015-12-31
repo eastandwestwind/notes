@@ -1,5 +1,5 @@
 ---
-title: merge multiple data frames
+title: R tutorial- Data Munging Part 2
 ---
 
 Just a short post on using he reduce function to merge together multiple files.
