@@ -1,8 +1,8 @@
 ---
-title: R tutorial- Getting Started Part 2
+title: R- Getting Started Part 2
 ---
 
-In this blog, I take a look at "The Effect of Vitamin C on Tooth Growth in Guinea Pigs," a study with data that comes default with R.  
+I want to investigate "The Effect of Vitamin C on Tooth Growth in Guinea Pigs," a study with data that comes default with R.  
 
 Dose levels of Vitamin C are 0.5, 1, and 2 mg.  
 

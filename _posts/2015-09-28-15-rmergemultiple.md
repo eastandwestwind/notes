@@ -1,8 +1,8 @@
 ---
-title: R tutorial- Data Munging Part 2
+title: R- Data Munging Part 2
 ---
 
-Just a short post on using he reduce function to merge together multiple files.
+Use the reduce function to merge together multiple files.
 
 I've got email marketing data in 6 separate files, one for each email campaign. I need to merge these together to find general stats.
 

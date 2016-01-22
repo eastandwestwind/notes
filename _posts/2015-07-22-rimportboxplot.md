@@ -1,8 +1,6 @@
 ---
-title: R tutorial- Getting Started Part 1
+title: R- Getting Started Part 1
 ---
-
-Hello, this post is not so much intended as a how-to, rather more as a code journal for myself and for others as an example of how I went from A to B to C, etc.
 
 In this example, I gathered data from 50 something participants regarding the difficulty of test question types. 
 
@@ -63,7 +61,7 @@ I saved my data from excel into a .csv, then began my R session:
 
 ![Boxplot](/images/boxplot_test_gender.png)
 
-We can just eyeball (yes I know I have small data set, whatever, don't hate) that there seems to be no significant difference between how males and females perceive question difficulty. 
+There seems to be no significant difference between how males and females perceive question difficulty. 
 
 The thing we notice is that people tend to view multiple choice questions as easier than essay questions, by about 1.25 difficulty levels. This gap is a bit smaller than I had initially expected. Make note that most people I surveyed were either in college or recent college graduates.
 

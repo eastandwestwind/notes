@@ -1,9 +1,9 @@
 ---
-title: R tutorial- Data Munging Part 3
+title: R- Data Munging Part 3
 ---
 
 
-A thing to know about R, is that data frames are referenced like [row,column].
+Data frames are referenced like [row,column].
 
 So if you have dataframe df, df[3:5,] will print out rows 3 through 5.
 
