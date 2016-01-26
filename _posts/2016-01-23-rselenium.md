@@ -4,7 +4,7 @@ title: R- How I got RSelenium to work
 
 RSelenium was throwing a couple errors I had to bypass through some research.
 
-Using RSelenium is more flexible than rvest for web scraping, because rvest can't grab elements loaded with javascript.
+Using RSelenium is more flexible than rvest for web scraping, because rvest can't grab elements loaded with javascript. The default browser is Firefox, though other drivers can be installed to work with more browsers, including headless.
 
 	library(RSelenium)
 

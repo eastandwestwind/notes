@@ -1,5 +1,5 @@
 ---
-title: R- TwitteR API Part 2
+title: R- Wordcloud from Tweets
 ---
 
 Create a wordcloud from tweets.
