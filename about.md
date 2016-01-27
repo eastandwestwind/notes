@@ -15,7 +15,7 @@ In my free time, I enjoy romping around outdoors, <a class="ga-event" data-ga-ca
 **Google:** Analytics, Adwords, Tag Manager, Webmaster Tools 
 **R:** sqldf, ggplot2, grep, caret, e1071, TwitteR, RGA
 
-Git, HTML/CSS, SQL, Python, Excel, WordPress, Tableau, Adobe Creative Suite, web development, marketing analytics/strategy, data scraping, data visualization, data wranging ("munging"), statistical analysis, UX 
+Git, HTML/CSS, SQL, Python, Excel, WordPress, Tableau, Adobe Creative Suite, web development, marketing analytics/strategy, web scraping, data visualization, data wranging ("munging"), statistical analysis, UX 
 
 
 **CONTACT**
