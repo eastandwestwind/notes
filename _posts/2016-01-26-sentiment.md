@@ -1,5 +1,5 @@
 ---
-title: R- Sentiment Analysis
+title: Sentiment Analysis Functions
 ---
 
 Grab the [DL opinion lexicon](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html) pos and neg words list. Add additional words as per industry or use.
