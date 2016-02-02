@@ -1,5 +1,5 @@
 ---
-title: R- TwitteR API
+title: TwitteR API
 ---
 
 Add app to twitter account.

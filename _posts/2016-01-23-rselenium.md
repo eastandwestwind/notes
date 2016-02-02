@@ -1,5 +1,5 @@
 ---
-title: R- How I got RSelenium to work
+title: How I got RSelenium to work
 ---
 
 RSelenium was throwing a couple errors I had to bypass through some research.

@@ -1,5 +1,5 @@
 ---
-title: R- Getting Started Part 2
+title: Getting Started Part 2
 ---
 
 I want to investigate "The Effect of Vitamin C on Tooth Growth in Guinea Pigs," a study with data that comes default with R.  

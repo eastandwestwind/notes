@@ -1,5 +1,5 @@
 ---
-title: R- Data Munging Part 2
+title: Data Munging Part 2
 ---
 
 Use the reduce function to merge together multiple files.

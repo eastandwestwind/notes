@@ -1,5 +1,5 @@
 ---
-title: R- Getting Started Part 1
+title: Getting Started Part 1
 ---
 
 In this example, I gathered data from 50 something participants regarding the difficulty of test question types. 

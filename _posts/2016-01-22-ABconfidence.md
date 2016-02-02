@@ -1,5 +1,5 @@
 ---
-title: R- A/B Test Confidence Intervals
+title: A/B Test Confidence Intervals
 ---
 
 This is an A, B, C test against a control, where p=proportion and n=observations. The resulting intervals are at 80% confidence.

@@ -1,5 +1,5 @@
 ---
-title: R- Data Munging Part 3
+title: Data Munging Part 3
 ---
 
 
