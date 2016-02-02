@@ -1,5 +1,5 @@
 ---
-title: Lapply function over vector to return multiple objects
+title: Lapply function over vector, return 1+ objects
 ---
 
 Basic structure of function. This meow function lapplys a function over a vector and outputs 2 objects per i in vector.
