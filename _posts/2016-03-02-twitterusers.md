@@ -1,0 +1,32 @@
+---
+title: TwitteR User calls 
+---
+
+Within the R TwitteR package is the ability to getUser() or lookupUsers(). This returns an object of class user, and requires certain calls to return information about that user. Here's how to extract followers and location from a list of users.
+
+
+	y<-lookupUsers(c('eastandwestwind', 'stephenleesmith'))
+
+Or if you have a data frame of tweets and usernames
+
+	y<-lookupUsers(df$screenName)
+
+This function gets number of followers
+
+	followers<-function(i){
+		return(length(i$getFollowerIDs()))
+	}
+
+Lapply the function over the users
+
+	lapply(y,followers)
+
+
+You can do the same for extracting location data from the users.
+
+	getLocation<-function(x){
+		y<-getUser(x)
+	    return(y$location)
+	}
+
+	locations <- lapply(df$screenName, function(x) getLocation(x))
