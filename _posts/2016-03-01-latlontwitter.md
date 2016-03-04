@@ -14,11 +14,11 @@ First load libraries and oauth twitter:
     library(maps)
     library(geosphere)
     library(gdata)
-    setup_twitter_oauth('eYUbYnbzKDD5WkWzXooLbGKuX','I6k4jz5rsNhCOteMv1JUbpSNC3E6eXgHlTE5gnqCAfNmqfVHt9')
+    setup_twitter_oauth('xxxxx','xxxxxxx')
 
 Search twitter, in this case I'm stripping retweets out of my data set.
 
-    catTweets<-searchTwitter('cats',n=1500)
+    catTweets<-searchTwitter('cats',n=150)
     catTweets<-strip_retweets(catTweets)
 
 To convert to data frame, either of these will work:
