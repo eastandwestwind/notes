@@ -1,5 +1,5 @@
 ---
-title: Wordcloud visualization 
+title: How to create a wordcloud from tweets
 ---
 
 Takes a vector and creates a fun wordcloud visualization based on most frequently used words in vector.

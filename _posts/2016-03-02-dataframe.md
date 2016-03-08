@@ -1,5 +1,5 @@
 ---
-title: Create a data frame from scratch
+title: How to create a data frame from scratch
 ---
 
 Useful for testing purposes.

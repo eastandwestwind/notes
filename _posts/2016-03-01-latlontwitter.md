@@ -1,5 +1,5 @@
 ---
-title: Extract lat/lon from twitter users
+title: How to extract lat/lon from twitter users
 ---
 
 Most tweets don't have an inherent lat/lon associated with it, even though it is available through the API. To get around this, I can extract location info from each user's profile, then parse it against gdata to match with a lat/lon.

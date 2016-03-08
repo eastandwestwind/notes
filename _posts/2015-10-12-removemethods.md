@@ -1,5 +1,5 @@
 ---
-title: Data Munging Part 3
+title: How to remove rows or columns from data frame
 ---
 
 

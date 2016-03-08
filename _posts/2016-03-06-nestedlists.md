@@ -1,5 +1,5 @@
 ---
-title: Nested lists
+title: How to remove null obs from nested lists
 ---
 
 To access the 25th item in the first list, we can do:
