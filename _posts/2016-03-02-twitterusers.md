@@ -31,8 +31,14 @@ You can do the same for extracting location data from the users.
 
 	locations <- lapply(df$screenName, function(x) getLocation(x))
 
+To get Tweets from specific user
 
+	m<-userTimeline("eastandwestwind",n=50,includeRts=TRUE,excludeReplies=FALSE)
+	m<-do.call("rbind",lapply(m,as.data.frame))
 
+Keep tweets containing "data"
+
+	m<-m[grep("data",m$text),]
 
 
 
