@@ -1,5 +1,5 @@
 ---
-title: A/B Test Confidence Intervals
+title: How to construct confidence intervals for A/B test
 ---
 
 This is an A, B, C test against a control, where p=proportion and n=observations. The resulting intervals are at 80% confidence.

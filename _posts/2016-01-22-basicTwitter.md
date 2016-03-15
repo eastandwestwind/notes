@@ -1,5 +1,5 @@
 ---
-title: TwitteR API
+title: How to extract data from TwitteR
 ---
 
 Add app to twitter account.

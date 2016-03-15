@@ -1,5 +1,5 @@
 ---
-title: Twitter Sentiment Analysis- Food Delivery Services
+title: How to perform Twitter Sentiment Analysis
 ---
 
 Load libraries

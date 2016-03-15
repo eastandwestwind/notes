@@ -1,5 +1,5 @@
 ---
-title: TwitteR User calls 
+title: How to get TwitteR User data
 ---
 
 Within the R TwitteR package is the ability to getUser() or lookupUsers(). This returns an object of class user, and requires certain calls to return information about that user. Here's how to extract followers and location from a list of users. 
