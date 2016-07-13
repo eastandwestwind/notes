@@ -1,8 +1,8 @@
 ---
-title: How to get TwitteR User data
+title: Extracting TwitteR User data
 ---
 
-Within the R TwitteR package is the ability to getUser() or lookupUsers(). This returns an object of class user, and requires certain calls to return information about that user. Here's how to extract followers and location from a list of users. 
+Within the R TwitteR package is the ability to getUser() or lookupUsers(). This returns an object of class user, and requires certain calls to return information about that user. Here's how to extract followers and location from a list of users.
 
 Note the [API rate limit](https://dev.twitter.com/rest/reference/get/users/lookup).
 
@@ -39,7 +39,3 @@ To get Tweets from specific user
 Keep tweets containing "data"
 
 	m<-m[grep("data",m$text),]
-
-
-
-

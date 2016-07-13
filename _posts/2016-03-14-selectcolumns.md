@@ -1,5 +1,5 @@
 ---
-title: How to select columns from data frame
+title: Select columns from data frame
 ---
 
 Say I have a data frame df with columns df$A, df$B, df$C. . .  df$Z. I only want df$C and df$M.

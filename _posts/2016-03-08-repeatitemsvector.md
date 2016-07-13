@@ -1,5 +1,5 @@
 ---
-title: How to repeat items in vector
+title: Repeat items in vector
 ---
 
 My vector:

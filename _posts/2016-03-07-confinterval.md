@@ -1,5 +1,5 @@
 ---
-title: How to estimate confidence interval
+title: Estimate confidence interval
 ---
 
 n<-sample size
@@ -14,7 +14,7 @@ Estimate margin of error
 	e<-qnorm(.975)*se
 
 Estimate confidence interval
-	
+
 	p + c(-e, e)
 
 
@@ -28,7 +28,7 @@ Confidence interval function:
 
 	conf<-function(p,n){
 		se<-sqrt(p*(1-p)/n)
-		e<-qnorm(.975)*se	
+		e<-qnorm(.975)*se
 		return(p + c(-e, e))
 	}
 

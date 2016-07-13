@@ -1,5 +1,5 @@
 ---
-title: How to delay outputs of function
+title: Delay outputs of function
 ---
 
 Use Sys.sleep. Numbers correspond to seconds.

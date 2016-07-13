@@ -1,5 +1,5 @@
 ---
-title: How to perform Twitter Sentiment Analysis
+title: Twitter Sentiment Analysis
 ---
 
 Load libraries
@@ -11,14 +11,14 @@ Load libraries
 
 Startup twitteR
 
-    setup_twitter_oauth("xxxxx","xxxxxxxx") 
+    setup_twitter_oauth("xxxxx","xxxxxxxx")
 
 Load [Sentiment Functions and pos/neg word lists](http://catherine.work/post/sentiment)
 
 Run multiple twitteR queries, extract text, run over score sentiment function, plot, and add identifying column to df.
 
-Foodler 
-  
+Foodler
+
     df<-searchTwitter('foodler',n=1500)
     df<-laply(df,function(t) t$getText())
     foodler<-score.sentiment(df,pos.words,neg.words,.progress='text')
@@ -71,7 +71,3 @@ Merge data frames, plot, score ratio of pos to neg sentiment
     3    Grubhub        93        64       157    59
 
 Foodler has the highest score, at 93, while Grubhub takes the bottom, at 59.
-
-
-
-

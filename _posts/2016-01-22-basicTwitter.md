@@ -1,5 +1,5 @@
 ---
-title: How to extract data from TwitteR
+title: Extract data from TwitteR
 ---
 
 Add app to twitter account.
@@ -9,16 +9,16 @@ Grab api key and api secret.
 	library("twitteR")
 	library('base64enc') #to correctly authenticate
 	library("httpuv")
-	setup_twitter_oauth("xxxxx","xxxxxxxx") 
+	setup_twitter_oauth("xxxxx","xxxxxxxx")
 
 
 Send DM to users
-	
-	dmSend("hihihi","user") 
+
+	dmSend("hihihi","user")
 
 View available locations
 
-	availableTrendLocations() 
+	availableTrendLocations()
 
 View trends in boston
 
@@ -33,19 +33,19 @@ Search twitter
 	tweets<-searchTwitter("cats", n=500, lang="en")
 
 To extract the text:
-	
+
 	text<-sapply(mach_tweets, function(x) x$getText())
 
 To extract entire data to data frame:
-	
+
 	df<-twListToDF(text)
 
 To order data by highest retweets
-	
+
 	test<-sqldf("select text,screenName,favoriteCount,retweetCount from df order by retweetCount desc, favoriteCount desc")
 
 Basic Wordcloud from tweets:
-	
+
 	library(wordcloud)
 	library(tm)
 	library(RColorBrewer)
@@ -63,11 +63,10 @@ Basic Wordcloud from tweets:
 	# Define tdm as matrix
 	m = as.matrix(tdm)
 	# Get word counts in decreasing order
-	word_freqs = sort(rowSums(m), decreasing=TRUE) 
+	word_freqs = sort(rowSums(m), decreasing=TRUE)
 	# Create a data frame with words and their frequencies
 	dm = data.frame(word=names(word_freqs), freq=word_freqs)
  	# Keep 50 top words
 	dm<-dm[1:50,]
 	# Plot wordcloud
 	wordcloud(dm$word, dm$freq, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
-

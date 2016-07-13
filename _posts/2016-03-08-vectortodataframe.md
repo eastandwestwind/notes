@@ -1,5 +1,5 @@
 ---
-title: How to convert a vector to data frame
+title: Convert a vector to data frame
 ---
 
 This is only useful if you have a raw vector that can be subset into rows of a data frame.

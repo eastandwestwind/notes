@@ -1,13 +1,13 @@
 ---
-title: How to construct confidence intervals for A/B test
+title: Construct confidence intervals for A/B test
 ---
 
 This is an A, B, C test against a control, where p=proportion and n=observations. The resulting intervals are at 80% confidence.
 
-	control <- c(p, n) 
-	a <- c(p, n) 
-	b <- c(p, n) 
-	c <- c(p, n) 
+	control <- c(p, n)
+	a <- c(p, n)
+	b <- c(p, n)
+	c <- c(p, n)
 
 	abtestfunc <- function(ad1, ad2){
       	sterror1 <- sqrt( ad1[1] * (1-ad1[1]) / ad1[2] )

@@ -1,5 +1,5 @@
 ---
-title: How to feed batches of data into function 
+title: Feed batches of data into function
 ---
 
 Starting off with sample data of 1250 rows:
@@ -16,7 +16,7 @@ Initialize a list and a sequence by groups of 100, aside from the last, and loop
 	}
 
 If you have a list instead of a data frame:
-	
+
 	sample<-list()
 	div<-seq(100,(length(list)+99),100)
 	for(i in 1:length(div))
@@ -41,6 +41,3 @@ Or if I need to feed each batch into a more complex function such as this funtim
 you need to lapply again:
 
 	lapply(1:length(sample),function(i) lapply(sample[[i]],funtimes))
-
-
-

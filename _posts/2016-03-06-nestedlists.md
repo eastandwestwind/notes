@@ -1,5 +1,5 @@
 ---
-title: How to remove null obs from nested lists
+title: Remove null obs from nested lists
 ---
 
 To access the 25th item in the first list, we can do:
@@ -15,4 +15,3 @@ Remove null obs from nested lists:
 	}
 
 	sample<-rmNullObs(sample)
-

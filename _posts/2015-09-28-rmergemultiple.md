@@ -1,5 +1,5 @@
 ---
-title: How to merge multiple data frames
+title: Merge multiple data frames
 ---
 
 Use the reduce function to merge together multiple files.
