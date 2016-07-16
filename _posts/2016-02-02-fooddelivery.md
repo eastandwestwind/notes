@@ -54,7 +54,7 @@ Merge data frames, plot, score ratio of pos to neg sentiment
     all.scores<-rbind(foodler,grubhub,hellofresh,doordash)
     ggplot(data=all.scores)+geom_bar(mapping=aes(x=score,fill=company),binwidth=.5)+facet_grid(company~.,scales="free_y")+theme_bw()+scale_fill_brewer()
 
-![Bar Chart](/images/Food_delivery_sentiment.png)
+![Bar Chart]({{ site.baseurl }}/images/Food_delivery_sentiment.png)
 
     all.scores$very.pos<-as.numeric(all.scores$score>=1.5)
     all.scores$very.neg=as.numeric(all.scores$score<=-1.5)
