@@ -24,11 +24,32 @@
 <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/touch-icon.png">
 <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/core.css">
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/scripts.js"></script>
+<style type="text/css">
+h1{
+  font-size: 36px;
+	font-family: "Inconsolata";
+	font-weight: normal;
+}
+#link{
+  padding-left: 20px;
+  padding-right: 20px;
+	font-family: "Inconsolata";
+}
+a{
+	color: blue;
+  text-decoration: underline;
+  border-bottom: none;
+}
+.nav{
+  padding-bottom: 30px;
+}
+</style>
 
 {% if jekyll.environment == 'production' %}
 

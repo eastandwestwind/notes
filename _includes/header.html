@@ -1,16 +1,10 @@
-<aside class="logo">
-
-	{% if page.url == '/index.html' or page.url == '/' %}
-		{% assign link = '/about' %}
-		{% assign prompt = 'About' %}
-	{% else %}
-		{% assign link = '/' %}
-		{% assign prompt = 'Back to Home' %}
-	{% endif %}
-
-	<a href="{{ link | prepend: site.baseurl }}">
-		<img src="http://www.gravatar.com/avatar/{{ site.author_gravatar }}.png?s=80" class="gravatar">
-	</a>
-	<span class="logo-prompt">{{ prompt }}</span>
+<aside>
+<center>
+	<h1>catherine smith</h1>
+	<div class="nav">
+			<a id="link" class="notes" href="http://catherine.work/notes">notes</a>
+			<a id="link" class="resume" href="http://catherine.work/resume">resume</a>
+			<a id="link" class="contact" href="http://www.google.com/recaptcha/mailhide/d?k=014VTpFHQo_w-bJjM2PEvGXQ==&amp;c=orkebmV_uIKgojNQ-aOyU1QpPEKKXiYjHikoykQFJo4=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075014VTpFHQo_w-bJjM2PEvGXQ\75\75\46c\75orkebmV_uIKgojNQ-aOyU1QpPEKKXiYjHikoykQFJo4\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="contact Catherine">contact</a>
+	</div>
 
 </aside>
